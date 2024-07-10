@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page in HTML with CSS Code Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="box">
+		<div class="box-form">
+			<div class="left">
+				<video autoplay muted loop poster="poster-image.jpg">
+					<!-- Provide a poster image while the video is loading or if it doesn't play -->
+					<source src="F:\Projects\Page-Replacement\LoginPage\LoginPage\videos\140855 (Original).mp4">
+					<!-- Add additional source elements for different video formats if needed -->
+					Your browser does not support the video tag.
+				</video>
+				<div class="overlay">
+					<h1>Hello World.</h1>
+				</div>
+			</div>
+			<div class="right">
+				<h5>Login</h5>
+                <form id="login-form" action="F:\Projects\Page-Replacement\MainPage\main\index.html" target="_self" method="post" onsubmit="return validateForm()">
+                    <div class="inputs">
+                        <input type="text" id="username" name="username" placeholder="Enter Your Username" required/>
+                        <br>
+                        <input type="password" id="password" name="password" placeholder="Enter The Password" required />
+                    </div>
+                    <br><br>
+
+                   <div class="remember-me--forget-password"> 
+                        <!-- Angular -->
+                       <!--<label>-->
+                          <!--  <input type="checkbox" name="remember" checked/> -->
+                          <!--  <span class="text-checkbox">Remember me</span> 
+                        </label>
+                        <p>Forget password?</p>-->
+                    </div>
+                    <br>
+                    <button type="submit">Login</button>
+                </form>
+			</div>
+		</div>
+	</div>  
+
+    <script>
+        function validateForm() {
+            // You can add your own validation logic here.
+            // For example, check if the username and password match your expected credentials.
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+                return true; // Allow form submission and redirect to mainpage.html
+            } else {
+                alert("Invalid credentials. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
